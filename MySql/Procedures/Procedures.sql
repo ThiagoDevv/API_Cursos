@@ -5,21 +5,15 @@
 
 DELIMITER &
 CREATE PROCEDURE add_pessoa_telefone_curso (in id int, in IdCurso int, in nome varchar(30),
-											in cpf varchar(14), in tipo char(3),
+					    in cpf varchar(14), in tipo char(3),
                                             in numero varchar(15), in curso varchar(30))
 	begin
 		Insert into pessoa value(id, nome, cpf);
 		insert into Telefones values(null, tipo, numero, id);
-        insert into cursos values(IdCurso, curso);
-        insert into Pessoa_Cursos values(id, IdCurso);
+        	insert into cursos values(IdCurso, curso);
+        	insert into Pessoa_Cursos values(id, IdCurso);
 	End &
- DELIMITER ;
- 
- 
- drop procedure add_pessoa_telefone_curso;
- 
- 
-call add_pessoa_telefone_curso(1, 1, 'Thiago', '4324257232', 'cel', '42354464578', 'Computação');
+DELIMITER ;
  
  
  /* SELECIONAR O IDPESSOA, NOME E CPF DE PESSOA */ 
@@ -39,14 +33,14 @@ DELIMITER ;
 
 DELIMITER $
 CREATE PROCEDURE Update_Pessoas(P_IdPessoa int,
-								novo_nome varchar(30),
+				novo_nome varchar(30),
                                 novo_cpf varchar(15),
                                 P_IdTelefones int,
                                 novo_numero varchar(30),
                                 novo_tipo char(3))
 begin
 
-	update pessoa 
+    update pessoa 
     set nome = novo_nome, cpf = novo_cpf
     where IdPessoa = P_IdPessoa;
     
@@ -81,8 +75,6 @@ end $
 DELIMITER ;
 
 
-call Delete_Pessoa(1);
-
 DELIMITER $
 create procedure select_cursos()
 begin
@@ -90,41 +82,4 @@ begin
     from cursos;
 
 end $
-DELIMITER ;
-
-
-
-select * from pessoa;
- 
-select * from Pessoa_Cursos; 
- 
-select * from cursos;
-  
-select * from telefones;
- 
- 
- delete from Pessoa_Cursos;
- 
- delete from pessoa;
- 
- delete from telefones;
- 
- delete from cursos;
-
- 
- 
-
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+DELIMITER ; 
