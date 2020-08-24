@@ -23,7 +23,7 @@ CREATE PROCEDURE Select_Todas_Pessoas()
 begin
 
 	select IdPessoa, nome, cpf
-    from pessoa;
+        from pessoa;
 
 end $
 DELIMITER ;
@@ -58,7 +58,7 @@ DELIMITER $
 CREATE PROCEDURE Delete_Pessoa(P_IdPessoa int)
 begin
 	
-	delete from Pessoa_Cursos
+    delete from Pessoa_Cursos
     where IdPessoa = P_IdPessoa;
     
     delete from telefones
@@ -74,12 +74,13 @@ begin
 end $
 DELIMITER ;
 
+/* SELECIONAR TODOS CURSOS */
 
 DELIMITER $
 create procedure select_cursos()
 begin
 	select IdCursos, nome
-    from cursos;
+        from cursos;
 
 end $
 DELIMITER ; 
