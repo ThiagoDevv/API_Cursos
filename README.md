@@ -10,4 +10,6 @@
    delete e o updates com a pasta teste_MySql onde possui arquivos .sql que tem as queries de teste, onde 
    o CRUD é feito pelos procedimentos.
    
-5. Para fazer a comunicação com o banco de dados eu utilizei o JAVA com a API JDBC
+5. Para fazer a comunicação com o banco de dados eu utilizei o JAVA com a API JDBC (Tive um problema de comunicação com o banco de dados
+ eu consegui me conectar a ele mas por conta de algum bug, que não consegui resolver a tempo, que quando tento fazer um insert, update,
+ delete ou read ele nao consegue comunicar isso ao banco)
