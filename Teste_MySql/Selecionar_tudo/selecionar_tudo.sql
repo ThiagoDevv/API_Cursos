@@ -1,0 +1,1 @@
+call Selecionar_tudo();

@@ -1,0 +1,1 @@
+call Delete_Pessoa(1); /* Informe o Id Que voçê dejesa remover
